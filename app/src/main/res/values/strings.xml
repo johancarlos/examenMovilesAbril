@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">appExam</string>
+    <string name="lastnameHint">Lastname</string>
+    <string name="nameHint">Name</string>
+    <string name="emailHint">Email</string>
+</resources>
