@@ -3,6 +3,7 @@ package com.example.appexam
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.LoginFilter
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun updateUi(model: CreateViewModel.UiModel?){
+        loadingProgressBar.visibility = if(model is CreateViewModel.UiModel.Loading) View.VISIBLE else View.GONE
         when(model){
             is CreateViewModel.UiModel.Create -> validarCreate(model.success)
         }
